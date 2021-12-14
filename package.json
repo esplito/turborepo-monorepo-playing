@@ -1,0 +1,42 @@
+{
+  "scripts": {
+    "create-next-ts": "pnpm create next-app  --config.typescript",
+    "build": "turbo run build",
+    "dev": "turbo run dev --no-cache --parallel --continue",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo run clean && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "turbo": "latest"
+  },
+  "turbo": {
+    "baseBranch": "origin/main",
+    "type": "npm",
+    "pipeline": {
+      "build": {
+        "outputs": [
+          ".next/**",
+          "dist/**",
+          "public/dist/**",
+          "public/build/**"
+        ],
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "test": {
+        "outputs": [
+          "coverage/**"
+        ],
+        "dependsOn": []
+      },
+      "lint": {
+        "outputs": []
+      },
+      "dev": {
+        "cache": false
+      }
+    }
+  }
+}

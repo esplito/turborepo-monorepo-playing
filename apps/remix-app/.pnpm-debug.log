@@ -1,0 +1,22 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1,
+    "workspacePrefix": "/Users/emil_e/Documents/webbprojekt/playground/turbo-test"
+  },
+  "1 error pnpm": {
+    "code": "ELIFECYCLE",
+    "errno": "ENOENT",
+    "syscall": "spawn",
+    "file": "sh",
+    "pkgid": "remix-app-template@",
+    "stage": "build",
+    "script": "remix build",
+    "pkgname": "remix-app-template",
+    "err": {
+      "name": "pnpm",
+      "message": "remix-app-template@ build: `remix build`\nspawn ENOENT",
+      "code": "ELIFECYCLE",
+      "stack": "pnpm: remix-app-template@ build: `remix build`\nspawn ENOENT\n    at ChildProcess.<anonymous> (/Users/emil_e/.nvm/versions/node/v16.3.0/pnpm-global/5/node_modules/.pnpm/pnpm@6.24.0/node_modules/pnpm/dist/pnpm.cjs:91776:22)\n    at ChildProcess.emit (node:events:394:28)\n    at maybeClose (node:internal/child_process:1067:16)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:301:5)"
+    }
+  }
+}
